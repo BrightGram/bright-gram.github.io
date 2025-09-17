@@ -1,68 +1,88 @@
-/* General reset */
+/* General Page Style */
 body {
+    background-color: #ffffff; /* white background */
+    font-family: Arial, sans-serif;
+    color: #1a1a1a; /* dark text */
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000; /* black background */
-    color: #fff; /* white text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-/* Container */
-.container {
-    background-color: #111; /* slightly lighter black */
-    padding: 30px;
-    border-radius: 12px;
+/* Header with Logo + App Name */
+header {
     text-align: center;
-    width: 400px;
-    box-shadow: 0 0 20px rgba(0, 123, 255, 0.6); /* glowing blue */
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #0d1b2a; /* dark blue/black */
+    border-bottom: 4px solid #0077ff; /* blue accent */
 }
 
-/* Title */
-h1 {
-    color: #007bff; /* bright blue */
-    margin-bottom: 20px;
+header .logo {
+    width: 120px;
+    height: auto;
 }
 
-/* Input field */
+header h1 {
+    color: #ffffff;   /* white */
+    font-size: 2.5rem;
+    font-weight: bold; /* bold */
+    margin-top: 10px;
+}
+
+/* Download Form */
+form {
+    text-align: center;
+    margin: 30px 0;
+}
+
 input[type="text"] {
-    width: 100%;
+    width: 60%;
     padding: 12px;
-    border: 2px solid #007bff;
-    border-radius: 8px;
-    outline: none;
-    font-size: 14px;
-    margin-bottom: 15px;
-    background: #000;
-    color: #fff;
+    border: 2px solid #0077ff; /* blue border */
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
-/* Button */
 button {
-    background: #007bff;
-    border: none;
     padding: 12px 20px;
-    font-size: 16px;
+    margin-left: 10px;
+    background-color: #0077ff; /* bright blue */
     color: white;
-    border-radius: 8px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #0056b3; /* darker blue */
+    background-color: #0056cc; /* darker blue on hover */
 }
 
-/* Download link */
-a {
-    color: #007bff;
-    font-weight: bold;
-    text-decoration: none;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #0d1b2a;
+    color: #ffffff;
+    margin-top: 40px;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    input[type="text"] {
+        width: 90%;  /* take almost full width on small screens */
+        margin-bottom: 10px;
+    }
 
-a:hover {
-    text-decoration: underline;
+    button {
+        width: 90%;  /* button also full width */
+        margin-left: 0;
+    }
+
+    header h1 {
+        font-size: 2rem; /* shrink text a little */
+    }
+
+    header .logo {
+        width: 90px; /* smaller logo */
+    }
 }
